@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'GanaChocolate';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 body {
   margin: 0;
   background: #fff;
@@ -20,10 +30,11 @@ body {
 
 /* 타이틀 */
 .title {
+  font-family: 'GanaChocolate', serif;
   text-align: center;
   font-size: clamp(28px, 3.5vw, 56px);
   letter-spacing: 0.25em;
-  margin-bottom: clamp(16px, 2vh, 32px);
+  margin-bottom: clamp(2px, 2vh, 2px);
 }
 
 /* ============================= */
@@ -33,7 +44,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 항상 4개 */
   gap: clamp(16px, 2vw, 32px);
-  height: calc(100% - clamp(80px, 15vh, 120px));
+  height: calc(80% - clamp(80px, 15vh, 120px));
 }
 
 /* 카테고리 */
@@ -45,6 +56,7 @@ body {
 
 /* 카테고리 제목 */
 .category h2 {
+  font-family: 'GanaChocolate', serif;
   font-size: clamp(20px, 2.2vw, 34px);
   margin-bottom: clamp(10px, 1.5vh, 18px);
   padding-bottom: 6px;
@@ -53,17 +65,25 @@ body {
 
 /* 메뉴 아이템 */
 .item {
+  display: flex;              /* 핵심 */
+  align-items: center;
   font-size: clamp(15px, 1.6vw, 24px);
   padding: clamp(6px, 0.8vh, 10px) 0;
   line-height: 1.2;
   cursor: pointer;
 }
 
+
 /* 가격 */
 .price {
+  margin-left: auto;          /* 오른쪽 밀착 */
+  text-align: right;
   font-size: 0.85em;
   opacity: 0.7;
+  padding-left: 12px;
+  white-space: nowrap;
 }
+
 
 /* 빈칸용 */
 .category.nothing {
