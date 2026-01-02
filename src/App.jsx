@@ -1,6 +1,14 @@
 import { useState } from "react";
 import "./App.css";
 
+import drink1 from "./assets/images/coffee1.jpg";
+import coffee1 from "./assets/images/coffee1.jpg";
+import coffee2 from "./assets/images/coffee2.jpg";
+import coffee3 from "./assets/images/coffee3.jpg";
+import coffee4 from "./assets/images/coffee4.jpg";
+import dessert1 from "./assets/images/dessert1.jpg";
+
+
 function App() {
   const [previewImg, setPreviewImg] = useState(null);
 
@@ -17,11 +25,46 @@ function App() {
       <h1 className="title">MENU</h1>
 
       <div className="menu-grid">
+
+        {/* ESPRESSO */}
+        <section className="category espresso">
+          <h2>Espresso</h2>
+          {[
+            "아메리카노",
+            "레몬 아메리카노",
+            "애플 아메리카노",
+            "아인슈페너",
+            "카페라떼",
+            "바닐라라떼",
+            "연유라떼",
+            "버터스카치 크림라떼",
+            "흑임자 인절미 크림라떼",
+            "말차 크림 라떼",
+          ].map((name, i) => (
+            <div key={i} className="item" onClick={() => open("./assets/images/coffee1.jpg")}>
+              {name}
+            </div>
+          ))}
+        </section>
+
+        {/* BREWING */}
+        <section className="category brewing">
+          <h2>Brewing</h2>
+          <div className="item" onClick={() => open(coffee1)}>
+            과테말라 안티구아 핀카메디나 SHB 워시드
+          </div>
+          <div className="item" onClick={() => open(coffee2)}>
+            카투라 + 구루메 블랜드
+          </div>
+          <div className="item" onClick={() => open("assets/images/dessert3.jpg")}>
+            콜롬비아 엑셀소 디카페인
+          </div>
+        </section>
         {/* SEASON */}
         <section className="category season">
           <h2>Season</h2>
 
-          <div className="item" onClick={() => open("assets/images/coffee1.jpg")}>
+          <div className="item" onClick={() => open("./assets/images/coffee1.jpg")}>
             <span className="name">김천 호두 크림라떼</span>
             <span className="price">5.5</span>
           </div>
@@ -42,43 +85,10 @@ function App() {
           </div>
         </section>
 
+
         <section className="category nothing"></section>
 
-        {/* BREWING */}
-        <section className="category brewing">
-          <h2>Brewing</h2>
-          <div className="item" onClick={() => open("assets/images/dessert1.jpg")}>
-            과테말라 안티구아 핀카메디나 SHB 워시드
-          </div>
-          <div className="item" onClick={() => open("assets/images/dessert2.jpg")}>
-            카투라 + 구루메 블랜드
-          </div>
-          <div className="item" onClick={() => open("assets/images/dessert3.jpg")}>
-            콜롬비아 엑셀소 디카페인
-          </div>
-        </section>
-
-        {/* ESPRESSO */}
-        <section className="category espresso">
-          <h2>Espresso</h2>
-          {[
-            "아메리카노",
-            "레몬 아메리카노",
-            "애플 아메리카노",
-            "아인슈페너",
-            "카페라떼",
-            "바닐라라떼",
-            "연유라떼",
-            "버터스카치 크림라떼",
-            "흑임자 인절미 크림라떼",
-            "말차 크림 라떼",
-          ].map((name, i) => (
-            <div key={i} className="item" onClick={() => open("assets/images/drink1.jpg")}>
-              {name}
-            </div>
-          ))}
-        </section>
-
+        <section className="category nothing"></section>
         {/* TEA */}
         <section className="category tea">
           <h2>Tea</h2>
