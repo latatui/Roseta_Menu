@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 import "./App.css";
 
 import drink1 from "./assets/images/coffee1.jpg";
@@ -19,6 +20,16 @@ function App() {
   const close = () => {
     setPreviewImg(null);
   };
+  
+  useEffect(() => {
+  if (!previewImg) return;
+
+  const timer = setTimeout(() => {
+    close();
+  }, 5000); // 5초
+
+  return () => clearTimeout(timer);
+}, [previewImg]);
 
   return (
     <div className="container">
