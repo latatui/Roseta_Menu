@@ -45,6 +45,7 @@ function App() {
             <span className="name">아인슈페너</span>
             <span className="price">3.8</span>
           </div>
+          <br></br>
           <div className="item" onClick={() => open(coffee5)}>
             <span className="name">카페라떼</span>
             <span className="price">4.0</span>

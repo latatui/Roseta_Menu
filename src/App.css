@@ -12,6 +12,13 @@
   font-display: swap;
 }
 
+@font-face {
+    font-family: 'GyeongbokgungSumunjangTitle';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-3@1.0/Sumunjang_TitleL.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+
 
 body {
   margin: 0;
@@ -44,7 +51,7 @@ body {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 항상 4개 */
   gap: clamp(16px, 2vw, 32px);
-  height: calc(80% - clamp(80px, 15vh, 120px));
+  height: calc(80% - clamp(80px, 15vh, 110px));
 }
 
 /* 카테고리 */
@@ -57,7 +64,7 @@ body {
 /* 카테고리 제목 */
 .category h2 {
   font-family: 'GanaChocolate', serif;
-  font-size: clamp(20px, 2.2vw, 34px);
+  font-size: clamp(20px, 2.2vw, 44px);
   margin-bottom: clamp(10px, 1.5vh, 18px);
   padding-bottom: 6px;
   border-bottom: 2px solid #000;
@@ -65,9 +72,11 @@ body {
 
 /* 메뉴 아이템 */
 .item {
+  font-family: 'GyeongbokgungSumunjangTitle';
+  font-weight: bold;
   display: flex;              /* 핵심 */
   align-items: center;
-  font-size: clamp(15px, 1.6vw, 24px);
+  font-size: clamp(15px, 1.6vw, 33px);
   padding: clamp(6px, 0.8vh, 10px) 0;
   line-height: 1.2;
   cursor: pointer;
@@ -76,6 +85,7 @@ body {
 
 /* 가격 */
 .price {
+  font-family: 'GyeongbokgungSumunjangTitle';
   margin-left: auto;          /* 오른쪽 밀착 */
   text-align: right;
   font-size: 0.85em;
@@ -106,4 +116,5 @@ body {
 .preview-image {
   max-width: 60vw;
   max-height: 70vh;
+  width: 30%;
 }
