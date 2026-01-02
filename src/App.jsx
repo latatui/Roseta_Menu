@@ -104,7 +104,7 @@ function App() {
         <section className="category season">
           <h2>Season1</h2>
           <div className="item" onClick={() => open(season1)}>
-            <span className="name">김천 호두 크림라떼</span>
+            <span className="name">김천 호두 크림 카페라떼</span>
             <span className="price">5.5</span>
           </div>
           <div className="item" onClick={() => open(season2)}>
@@ -144,19 +144,19 @@ function App() {
         <section className="category tea">
           <h2>Tea</h2>
           <div className="item" onClick={() => open("assets/images/tea1.jpg")}>
-            <span className="name">히비스커스 레몬티</span>
+            <span className="name">히비스커스 레몬티<span className="badge-caffeine">카페인 X</span></span><span className="ice-only"> [ICE ONLY]</span>
             <span className="price">5.5</span>
           </div>
           <div className="item" onClick={() => open("assets/images/tea2.jpg")}>
-            <span className="name">달콤 복숭아 블랙티</span>
+            <span className="name">달콤 복숭아 블랙티</span><span className="ice-only"> [ICE ONLY]</span>
             <span className="price">4.5</span>
           </div>
           <div className="item" onClick={() => open("assets/images/tea3.jpg")}>
-            <span className="name">수제 허니 자몽 블랙티</span>
+            <span className="name">수제 허니 자몽 블랙티</span><span className="ice-only"> [ICE ONLY]</span>
             <span className="price">5.0</span>
           </div>
           <div className="item" onClick={() => open("assets/images/tea4.jpg")}>
-            <span className="name">루이보스 오렌지 허브티</span>
+            <span className="name">루이보스 오렌지 허브티<span className="badge-caffeine">카페인 X</span></span>
             <span className="price">4.5</span>
           </div>
           <div className="item" onClick={() => open("assets/images/tea5.jpg")}>
