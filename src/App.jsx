@@ -8,6 +8,7 @@ import coffee2 from "./assets/images/coffee2.jpg";
 import coffee3 from "./assets/images/coffee3.jpg";
 import coffee4 from "./assets/images/coffee4.jpg";
 import dessert1 from "./assets/images/dessert1.jpg";
+import season5 from "./assets/images/season5.png";
 
 
 function App() {
