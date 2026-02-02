@@ -75,216 +75,264 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className="title">MENU</h1>
+      {/* ESPRESSO */}
+      <table className="menu-table">
+        <tbody>
+          <tr className="upper-tr">
 
-      <div className="menu-grid">
+            {/* Hand Drip */}
+            <td>
+              <section className="category brewing">
+                <h2>Hand Drip</h2>
+                <div className="item" onClick={() => open("brewing1", brewing1)}>
+                  <span className="name">콜롬비아 엘 파라이소 리치 패치 더블 무산소 발효<br /><span className="handDrip-exp">사파이어포토 · 리치 · 복숭아 · 다크초콜릿 · 바닐라 · <span className="important">강한산미</span></span></span>
+                  <span className="price">6.9</span>
+                </div>
+                <div className="item" onClick={() => open("brewing2", brewing2)}>
+                  <span className="name">에티오피아 구지 우라가 야비루 코바 G1 내추럴<br /><span className="handDrip-exp">파인애플 · 패션프룻 · 자두 · 포도 · 쥬시 · <span className="important">중간산미</span></span></span>
+                  <span className="price">5.9</span>
+                </div>
+                <div className="item" onClick={() => open("brewing3", brewing3)}>
+                  <span className="name">과테말라 안티구아 SHB 위시드<br /><span className="handDrip-exp">호두 · 마카다미아 · 갈색설탕 · 스모키 · <span className="important">낮은산미</span></span></span>
+                  <span className="price">5.9</span>
+                </div>
+                <div className="item" onClick={() => open("brewing3", brewing3)}>
+                  <span className="name">콜롬비아 슈가케인 디카페일<br /><span className="handDrip-exp">사라 · 탄제린 · 카라멜 · 흑설탕 · <span className="important">중간산미</span></span></span>
+                  <span className="price">5.9</span>
+                </div>
+              </section>
+            </td>
+            <td>
+              {/* Herb TEA */}
+              <section className="category tea">
+                <h2>Herb Tea</h2>
+                <div className="item" onClick={() => open("tea1", tea1)}>
+                  <span className="name">캐모미일티<br />(non-sweet)</span>
+                  <span className="price">4.5</span>
+                </div>
+                <div className="item" onClick={() => open("tea2", tea2)}>
+                  <span className="name">오렌지 루이보스 티<br />(non-sweet)</span>
+                  <span className="price">4.5</span>
+                </div>
+                <div className="item" onClick={() => open("tea3", tea3)}>
+                  <span className="name">레몬 히비스커스 티</span>
+                  <span className="price">5.0</span>
+                </div>
+                <div className="item" onClick={() => open("tea4", tea4)}>
+                  <span className="name">리치 캐모마일 티</span>
+                  <span className="price">5.0</span>
+                </div>
+                <div className="item" onClick={() => open("tea5", tea5)}>
+                  <span className="name">딸기 루이보스 티</span>
+                  <span className="price">5.0</span>
+                </div>
+                <div className="item" onClick={() => open("tea6", tea6)}>
+                  <span className="name">팬지 플라워 티</span>
+                  <span className="price">5.0</span>
+                </div>
+              </section>
+            </td>
 
-        {/* ESPRESSO */}
-        <section className="category espresso">
-          <h2>Espresso</h2>
+            {/* Black TEA */}
+            <td>
+              <section className="category season">
+                <h2>Black Tea</h2>
 
-          <div className="item" onClick={() => open("coffee1", coffee1)}>
-            <span className="name">아메리카노</span>
-            <span className="price">3.5</span>
-          </div>
+                <div className="item" onClick={() => open("tea1", tea1)}>
+                  <span className="name">레몬 오렌지 블랙티<br />(non-sweet)</span>
+                  <span className="price">4.5</span>
+                </div>
+                <div className="item" onClick={() => open("tea2", tea2)}>
+                  <span className="name">레몬 얼그레이 블랙티</span>
+                  <span className="price">5.0</span>
+                </div>
+                <div className="item" onClick={() => open("tea3", tea3)}>
+                  <span className="name">자몽청 허니 블랙티</span>
+                  <span className="price">5.0</span>
+                </div>
+                <div className="item" onClick={() => open("tea4", tea4)}>
+                  <span className="name">복숭아청 블랙티</span>
+                  <span className="price">5.0</span>
+                </div>
+              </section>
+            </td>
+            {/* Milk Tea */}
+            <td>
+              <section className="category season">
+                <h2>Milk Tea</h2>
 
-          <div className="item" onClick={() => open("coffee2", coffee2)}>
-            <span className="name">레몬 아메리카노</span>
-            <span className="price">3.8</span>
-          </div>
+                <div className="item" onClick={() => open("season5", season5)}>
+                  <span className="name">김천 자두 캔디샷스리랑카 로얄 밀크티<br />(입문자용)</span>
+                  <span className="price">5.5</span>
+                </div>
 
-          <div className="item" onClick={() => open("coffee3", coffee3)}>
-            <span className="name">애플 아메리카노</span>
-            <span className="price">3.8</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee4", coffee4)}>
-            <span className="name">아인슈페너</span>
-            <span className="price">3.8</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee5", coffee5)}>
-            <span className="name">카페라떼</span>
-            <span className="price">4.0</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee6", coffee6)}>
-            <span className="name">바닐라라떼</span>
-            <span className="price">4.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee7", coffee7)}>
-            <span className="name">연유라떼</span>
-            <span className="price">4.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee8", coffee8)}>
-            <span className="name">버터스카치 크림라떼</span>
-            <span className="price">5.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee9", coffee9)}>
-            <span className="name">흑임자 인절미 크림라떼</span>
-            <span className="price">5.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("coffee10", coffee10)}>
-            <span className="name">말차 카페라떼</span>
-            <span className="price">4.7</span>
-          </div>
-        </section>
-
-        {/* BREWING */}
-        <section className="category brewing">
-          <h2>Brewing</h2>
-          <div className="item" onClick={() => open("brewing1", brewing1)}>
-            <span className="name">과테말라 안티구아 핀카메디나 SHB 워시드</span>
-            <span className="price">5.0</span>
-          </div>
-          <div className="item" onClick={() => open("brewing2", brewing2)}>
-            <span className="name">카투라 + 구루메 블랜드</span>
-            <span className="price">5.7</span>
-          </div>
-          <div className="item" onClick={() => open("brewing3", brewing3)}>
-            <span className="name">콜롬비아 엑셀소 디카페인</span>
-            <span className="price">5.5</span>
-          </div>
-        </section>
-
-        {/* SEASON */}
-        <section className="category season">
-          <h2>Season1</h2>
-          <div className="item" onClick={() => open("season1", season1)}>
-            <span className="name">김천 호두 크림 카페라떼</span>
-            <span className="price">5.5</span>
-          </div>
-          <div className="item" onClick={() => open("season2", season2)}>
-            <span className="name">김천 호두 밀크</span>
-            <span className="price">4.5</span>
-          </div>
-          <div className="item" onClick={() => open("season3", season3)}>
-            <span className="name">김천 말차크림 호두라떼</span>
-            <span className="price">6.0</span>
-          </div>
-          <div className="item" onClick={() => open("season4", season4)}>
-            <span className="name">김천 호두 홍시라떼</span>
-            <span className="price">6.6</span>
-          </div>
-        </section>
-
-        {/* SEASON */}
-        <section className="category season">
-          <h2>Season2</h2>
-
-          <div className="item" onClick={() => open("season5", season5)}>
-            <span className="name">김천 자두 캔디샷</span>
-            <span className="price">5.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("season6", season6)}>
-            <span className="name">김천 자두 그린티</span>
-            <span className="price">5.0</span>
-          </div>
-
-          <div className="item" onClick={() => open("season7", season7)}>
-            <span className="name">김천 자두 로얄 밀크티</span>
-            <span className="price">6.0</span>
-          </div>
-        </section>
+                <div className="item" onClick={() => open("season6", season6)}>
+                  <span className="name">런던 얼그레이 냉침 밀크티<br />(베르가못 향이 진해요!)</span>
+                  <span className="price">5.0</span>
+                </div>
+              </section>
+            </td>
 
 
-        <section className="category nothing"></section>
-
-        {/* TEA */}
-        <section className="category tea">
-          <h2>Tea</h2>
-          <div className="item" onClick={() => open("tea1", tea1)}>
-            <span className="name">히비스커스 레몬티<span className="badge-caffeine">카페인 X</span></span><span className="ice-only"> [ICE ONLY]</span>
-            <span className="price">5.5</span>
-          </div>
-          <div className="item" onClick={() => open("tea2", tea2)}>
-            <span className="name">달콤 복숭아 블랙티</span><span className="ice-only"> [ICE ONLY]</span>
-            <span className="price">4.5</span>
-          </div>
-          <div className="item" onClick={() => open("tea3", tea3)}>
-            <span className="name">수제 허니 자몽 블랙티</span><span className="ice-only"> [ICE ONLY]</span>
-            <span className="price">5.0</span>
-          </div>
-          <div className="item" onClick={() => open("tea4", tea4)}>
-            <span className="name">루이보스 오렌지 허브티<span className="badge-caffeine">카페인 X</span></span>
-            <span className="price">4.5</span>
-          </div>
-          <div className="item" onClick={() => open("tea5", tea5)}>
-            <span className="name">팬지 플라워 티</span>
-            <span className="price">5.0</span>
-          </div>
-          <div className="item" onClick={() => open("tea6", tea6)}>
-            <span className="name">캐모마일 허브티</span>
-            <span className="price">4.5</span>
-          </div>
-          <div className="item" onClick={() => open("tea7", tea7)}>
-            <span className="name">스리랑카 블랙티</span>
-            <span className="price">4.5</span>
-          </div>
-          <div className="item" onClick={() => open("tea8", tea8)}>
-            <span className="name">스리랑카 로얄 밀크티</span>
-            <span className="price">5.5</span>
-          </div>
-        </section>
-
-        {/* KIDS */}
-        <section className="category kids">
-          <h2>Kids Beverage</h2>
-
-          <div className="item" onClick={() => open("kids1", kids1)}>
-            <span className="name">꾸덕 초코라떼</span>
-            <span className="price">5.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("kids2", kids2)}>
-            <span className="name">장미 에이드</span>
-            <span className="price">4.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("kids3", kids3)}>
-            <span className="name">레몬 에이드</span>
-            <span className="price">4.5</span>
-          </div>
-
-          <div className="item" onClick={() => open("kids4", kids4)}>
-            <span className="name">팬지 플라워 라떼</span>
-            <span className="price">5.0</span>
-          </div>
-
-          <div className="item" onClick={() => open("kids5", kids5)}>
-            <span className="name">팬지 플라워 아이스티</span>
-            <span className="price">5.0</span>
-          </div>
-
-          <div className="item" onClick={() => open("kids6", kids6)}>
-            <span className="name">루이보스 복숭아 아이스티</span>
-            <span className="price">5.0</span>
-          </div>
-        </section>
+          </tr>
 
 
-        {/* OPTION */}
-        <section className="category option">
-          <h2>Option</h2>
-          <div className="item" onClick={() => open(option1)}>
-            <span className="name">디카페인 변경</span>
-            <span className="price">0.6</span>
-          </div>
-          <div className="item" onClick={() => open(option2)}>
-            <span className="name">오트변경</span>
-            <span className="price">0.7</span>
-          </div>
-          <div className="item" onClick={() => open(option3)}>
-            <span className="name">샷추가</span>
-            <span className="price">0.5</span>
-          </div>
-        </section>
-      </div>
+          {/* <section className="category nothing"></section> */}
+
+          <tr>
+            {/* ESPRESSO */}
+            <td className="items-cell">
+              <section className="category espresso">
+                <h2>Espresso</h2>
+
+                <div className="item" onClick={() => open("coffee1", coffee1)}>
+                  <span className="name">아메리카노</span>
+                  <span className="price">3.0</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee2", coffee2)}>
+                  <span className="name">레몬 아메리카노(마자그란)</span>
+                  <span className="price">3.8</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee3", coffee3)}>
+                  <span className="name">애플 아메리카노(100% 사과즙)</span>
+                  <span className="price">3.8</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee4", coffee4)}>
+                  <span className="name">아인슈페너</span>
+                  <span className="price">3.8</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee5", coffee5)}>
+                  <span className="name">카페라떼</span>
+                  <span className="price">4.0</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee6", coffee6)}>
+                  <span className="name">바닐라라떼</span>
+                  <span className="price">4.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee7", coffee7)}>
+                  <span className="name">베트남 연유라떼</span>
+                  <span className="price">4.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee8", coffee8)}>
+                  <span className="name">버터스카치 크림라떼</span>
+                  <span className="price">5.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee8", coffee8)}>
+                  <span className="name">레몬 크림라떼</span>
+                  <span className="price">5.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee9", coffee9)}>
+                  <span className="name">흑임자 인절미 라떼<br />(인절미 떡이 올라가요!)</span>
+                  <span className="price">5.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("coffee10", coffee10)}>
+                  <span className="name">제주 말차 카페라떼</span>
+                  <span className="price">4.7</span>
+                </div>
+              </section>
+            </td>
+
+            {/* SEASON */}
+            <td>
+              <section className="category season">
+                <h2>Signiture</h2>
+                <div className="item" onClick={() => open("season1", season1)}>
+                  <span className="name">김천 호두크림 카페라떼</span>
+                  <span className="price">5.5</span>
+                </div>
+                <div className="item" onClick={() => open("season2", season2)}>
+                  <span className="name">김천 호두라떼</span>
+                  <span className="price">4.7</span>
+                </div>
+                <div className="item" onClick={() => open("season3", season3)}>
+                  <span className="name">김천 말차크림 호두라떼</span>
+                  <span className="price">6.0</span>
+                </div>
+                <div className="item" onClick={() => open("season4", season4)}>
+                  <span className="name">김천 호두 홍시라떼</span>
+                  <span className="price">6.5</span>
+                </div>
+              </section>
+            </td>
+
+            {/* Beverage */}
+            <td>
+              <section className="category kids">
+                <h2>Beverage</h2>
+
+                <div className="item" onClick={() => open("kids1", kids1)}>
+                  <span className="name">꾸덕 초코라떼</span>
+                  <span className="price">5.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids2", kids2)}>
+                  <span className="name">팬지 플라워라떼</span>
+                  <span className="price">5.0</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids3", kids3)}>
+                  <span className="name">팬지 플라워 에이드</span>
+                  <span className="price">5.0</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids4", kids4)}>
+                  <span className="name">레몬 에이드</span>
+                  <span className="price">4.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids5", kids5)}>
+                  <span className="name">샤인버스켓 에이드</span>
+                  <span className="price">5.0</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids6", kids6)}>
+                  <span className="name">레드 / 화이트 뱅쇼</span>
+                  <span className="price">5.5</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids6", kids6)}>
+                  <span className="name">레드 / 화이트 샹그리아</span>
+                  <span className="price">5.7</span>
+                </div>
+
+                <div className="item" onClick={() => open("kids6", kids6)}>
+                  <span className="name">립톤 복숭아 아이스티</span>
+                  <span className="price">3.0</span>
+                </div>
+              </section>
+            </td>
+            {/* OPTION */}
+            <td>
+              <section className="category option">
+                <h2>Option</h2>
+                <div className="item" onClick={() => open(option1)}>
+                  <span className="name">디카페인 변경</span>
+                  <span className="price">0.5</span>
+                </div>
+                <div className="item" onClick={() => open(option2)}>
+                  <span className="name">오트 밀크 변경</span>
+                  <span className="price">0.7</span>
+                </div>
+                <div className="item" onClick={() => open(option3)}>
+                  <span className="name">샷추가</span>
+                  <span className="price">0.6</span>
+                </div>
+              </section>
+            </td>
+
+          </tr>
+        </tbody>
+      </table >
 
       {/* IMAGE PREVIEW */}
       {preview && (
