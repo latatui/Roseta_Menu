@@ -59,9 +59,6 @@ body {
   overflow: hidden;
   min-height: 0;
 }
-.container.blur {
-  filter: blur(1px);
-}
 
 .container.coffee-bg {
   background-color: blanchedalmond;
@@ -111,20 +108,38 @@ body {
    메뉴 아이템
 ========================= */
 .item {
+  position: relative; /* 자식 요소인 .best-icon의 기준점이 됨 */
   font-family: 'GyeongbokgungSumunjangTitle';
   font-weight: bold;
-
   display: flex;
   align-items: flex-start;
-
   width: 100%;
-  position: relative;
-
-  font-size: clamp(14px, 1.2vw, 24px); /* 🔥 5vw 제거 */
+  font-size: clamp(14px, 1.2vw, 24px);
   padding: clamp(4px, 0.6vh, 8px) 0;
-
   line-height: 1.25;
   cursor: pointer;
+}
+
+/* BEST 아이콘 스타일 (글자 취급 X) */
+.best-icon {
+  position: absolute;   /* 텍스트 흐름에서 완전히 제외됨 */
+  top: -5px;           /* 메뉴 이름보다 살짝 위로 (수치 조절 가능) */
+  left: -35px;          /* 메뉴 이름보다 살짝 왼쪽으로 (수치 조절 가능) */
+  width: clamp(25px, 2.5vw, 45px); /* 화면 크기에 따라 반응형 크기 조절 */
+  height: auto;
+  pointer-events: none; /* 아이콘을 클릭해도 뒤의 메뉴가 클릭되도록 설정 */
+  z-index: 10;          /* 글자보다 위에 보이게 */
+  
+  /* 부드러운 느낌을 원한다면 살짝 그림자 추가 */
+  filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.2));
+}
+
+.ice-only {
+  font-family: 'GyeongbokgungSumunjangTitle'; /* 메뉴명과 같은 폰트 사용 */
+  font-size: 0.8em; /* 메뉴명보다 약간 작게 */
+  color: hsl(210, 100%, 66%); /* 파란색 계열로 ICE 느낌 강조 (원하는 색상으로 변경 가능) */
+  margin-left: 10px; /* 메뉴명과의 간격 */
+  white-space: nowrap; /* 글자가 줄바꿈되지 않도록 */
 }
 
 /* 가격 */
@@ -144,7 +159,6 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-
   width: 100vw;
   height: 100vh;
 
@@ -152,7 +166,13 @@ body {
   justify-content: center;
   align-items: center;
 
-  z-index: 9999999;
+  background: rgba(0,0,0,0.35);
+
+  /* 흐림 효과 */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+
+  z-index: 9999;
 }
 
 .overlay-bg {
@@ -161,45 +181,66 @@ body {
 
   background: rgba(255,255,255,0.6); /* fallback */
 
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
 }
+
+/* 미리보기 박스 */
 
 .preview-box {
   position: relative;
   z-index: 1;
 
-  width: 100%;
-  max-width: 600px;
-  max-height: 90vh;
+  width: 50vw;
+  height: 50vh;
+
+  display: flex;
+  flex-direction: column;
 
   background: white;
   border-radius: 20px;
-  overflow: auto;
+  overflow: hidden; /* 🔥 넘침 방지 */
 }
 
-/* 이미지 / 비디오 */
 .preview-media {
   width: 100%;
+  height: 100%;
+
+  object-fit: contain; /* 🔥 비율 유지 + 꽉 채움 */
+
   display: block;
+
   user-select: none;
   pointer-events: none;
 }
 
+/* 이미지 */
+
+.preview-image {
+  width: 30vw;
+  height: 30vh;
+  object-fit: contain;
+}
+
 /* 텍스트 */
 .preview-text {
-  padding: 20px;
+  height: 30%; /* 🔥 핵심 */
+  text-align: center;
+  padding: 16px;
+
+  overflow-y: auto; /* 🔥 길면 스크롤 */
 }
 
 .preview-name {
-  font-size: 24px;
+  font-family: 'GyeongbokgungSumunjangTitle';
+  font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 10px;
 }
 
 .preview-desc {
-  font-size: 16px;
-  color: #555;
+  font-family: 'GyeongbokgungSumunjangTitle';
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 /* =========================
