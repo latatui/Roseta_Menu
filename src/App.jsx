@@ -111,10 +111,10 @@ function App() {
               <td width={"30%"}>
                 <section className="category brewing">
                   <h2>Hand Drip</h2>
-                  {/* <div className="item" onClick={() => open("brewing1", brewing1, "video")}>
+                  <div className="item" onClick={() => open("brewing1", brewing1, "video")}>
                     <span className="name">콜롬비아 로스 파티오스 피치 코퍼먼티드<br /><span className="handDrip-exp">복숭아티 · 황도 · 트로피컬 · 실키 · <span className="important">강한산미</span></span></span>
                     <span className="price">6.9</span>
-                  </div> */}
+                  </div>
                   <div className="item" onClick={() => open("brewing1", brewing1, "video")}>
                     <span className="name">에티오피아 구지 모모라 G1 내추럴<br /><span className="handDrip-exp">블딸기 · 감귤 · 살구 · 체리 · 꿀 · 플로럴 · <span className="important">중간산미</span></span></span>
                     <span className="price">5.9</span>
@@ -147,10 +147,10 @@ function App() {
                     <span className="name">과테말라 안티구아 SHB 위시드<br /><span className="handDrip-exp">호두 · 마카다미아 · 갈색설탕 · 스모키 · <span className="important">낮은산미</span></span></span>
                     <span className="price">5.5</span>
                   </div>
-                  <div className="item" onClick={() => open("brewing4", brewing4, "video")}>
+                  {/* <div className="item" onClick={() => open("brewing4", brewing4, "video")}>
                     <span className="name">콜롬비아 슈가케인 디카페인<br /><span className="handDrip-exp">사과 · 탄제린 · 카라멜 · 흑설탕 · <span className="important">중간산미</span></span></span>
                     <span className="price">5.5</span>
-                  </div>
+                  </div> */}
                 </section>
               </td>
               {/* Signiture */}
