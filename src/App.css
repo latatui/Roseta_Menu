@@ -124,7 +124,7 @@ body {
 .best-icon {
   position: absolute;   /* 텍스트 흐름에서 완전히 제외됨 */
   top: -5px;           /* 메뉴 이름보다 살짝 위로 (수치 조절 가능) */
-  left: -35px;          /* 메뉴 이름보다 살짝 왼쪽으로 (수치 조절 가능) */
+  left: -20px;          /* 메뉴 이름보다 살짝 왼쪽으로 (수치 조절 가능) */
   width: clamp(25px, 2.5vw, 45px); /* 화면 크기에 따라 반응형 크기 조절 */
   height: auto;
   pointer-events: none; /* 아이콘을 클릭해도 뒤의 메뉴가 클릭되도록 설정 */

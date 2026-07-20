@@ -423,7 +423,7 @@ function App() {
                 <section className="category option">
                   <h2>Gelato</h2>
                   <div className="item" onClick={() => open("Gelato1", Gelato1)}>
-                    <span className="name">젤라또<br/>(바닐라/흑임자/녹차/망고)</span>
+                    <span className="name">젤라또<br/>(바닐라/녹차/망고)</span>
                     <span className="price">4.5</span>
                   </div>
                   <div className="item" onClick={() => open("Gelato2", Gelato2)}>
